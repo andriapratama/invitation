@@ -2,6 +2,7 @@ import React from "react";
 import './Home.css';
 import Hero from "./components/hero/Hero";
 import Feature from "./components/feature/Feature";
+import Feedback from "./components/feedback/Feedback";
 
 const Home = () => {
     return (
@@ -16,7 +17,7 @@ const Home = () => {
                 </p>
             </div>
             <Feature />
-            <div className="feedback"></div>
+            <Feedback />
             <div className="footer"></div>
         </div>
     )

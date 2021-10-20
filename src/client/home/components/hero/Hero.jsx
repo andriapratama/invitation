@@ -20,7 +20,7 @@ const Hero = () => {
 
     const options = {
         items: 1,
-        nav: false,
+        nav: true,
         dots: false,
         loop: true,
         autoplay: true,
@@ -30,11 +30,6 @@ const Hero = () => {
 
     return (
         <div className="hero">
-            <div className="hero-button">
-                <i className="fas fa-chevron-left"></i>
-                <i className="fas fa-chevron-right"></i>
-            </div>
-            
             <OwlCarousel
                 className="owl-carousel"
                 {...options}
