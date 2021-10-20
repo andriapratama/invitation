@@ -1,0 +1,39 @@
+.protokol {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.protokol p {
+    text-align: justify;
+}
+
+.protokol-body{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background-color: grey;
+}
+
+.protokol-group {
+    width: 35%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+.protokol-group img {
+    width: 80%;
+    height: auto;
+}
+
+.protokol-group p{
+    text-align: center;
+    margin: 0;
+}
