@@ -1,0 +1,23 @@
+.hero{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero-body{
+    width: 100%;
+    height: 70vh;
+}
+
+.hero-button{
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    z-index: 99;
+    font-size: 30px;
+}
