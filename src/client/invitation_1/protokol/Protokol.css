@@ -1,12 +1,20 @@
 .protokol {
-    width: 100%;
+    width: 80%;
     height: auto;
     text-align: center;
-    margin: 0 auto;
+    margin: 50px auto;
+}
+
+.protokol img{
+    object-fit: cover;
+    overflow: hidden;
+    width: 180px;
+    height: 50px;
 }
 
 .protokol p {
     text-align: justify;
+    margin: 0 0 20px 0;
 }
 
 .protokol-body{
@@ -18,7 +26,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     border-radius: 20px;
-    background-color: grey;
+    background-color: transparent;
+    border: 1px solid #FFB740;
+    ;
 }
 
 .protokol-group {

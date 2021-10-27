@@ -4,7 +4,7 @@ import Invitation1 from '../invitation_1/Invitation1';
 
 const Product = () => {
     const [isShowInvitation, setIsShowInvitation] = useState(false)
-    const [widthPhone, setWidthPhone] = useState("");
+    const [widthPhone, setWidthPhone] = useState();
 
     console.log(widthPhone);
 
@@ -36,7 +36,7 @@ const Product = () => {
         {
             id: 1,
             nama: "iPhone X, iPhone 11 Pro, iPhone 13 Mini, iPhone SE",
-            width: 375
+            width: "375"
         },
         {
             id: 2,
@@ -55,9 +55,24 @@ const Product = () => {
         }
     ]
 
+    // const handleSelect = (e) => {
+    //     let width = e.target.value;
+    //     setWidthPhone(width)
+    // }
+
     const handleSelect = (e) => {
-        const id = e.target.value;
+        let id = e.target.value;
         console.log(id)
+        if(id === '1') {
+            setWidthPhone(375);
+        } else if(id === '2') {
+            setWidthPhone(414);
+        } else if (id === '3') {
+            setWidthPhone(428);
+        } else if (id === '4') {
+            setWidthPhone(390);
+        }
+        
     }
 
     return (

@@ -1,5 +1,6 @@
 import React from "react";
 import './Protokol.css';
+import Crown from '../../../img/ukiran_2.svg';
 import Icon1 from '../../../icons/avoid-crowds.png';
 import Icon2 from '../../../icons/handshake.png';
 import Icon3 from '../../../icons/mask.png';
@@ -9,6 +10,7 @@ import Icon5 from '../../../icons/washing-hands.png';
 const Protokol = () => {
     return (
         <div className="protokol">
+            <img src={Crown} alt="mahkota title" />
             <h1 className="title">Protokol Kesehatan</h1>
             <p>Acara diselenggarakan dengan protokol kesehatan yang harus dipatuhi demi mencegah penyebaran virus Covid-19. Tanpa mengurangi rasa hormat, tamu undangan diharapkan untuk mengikuti protokol kesehatan.</p>
             <div className="protokol-body">

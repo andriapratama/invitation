@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import './Invitation1.css';
 import Protokol from "./protokol/Protokol";
+import DetailEvent from "./detail-event/DetailEvent";
+import Flower from "../../img/ukiran_1.svg";
+import Crown from "../../img/ukiran_2.svg";
 
 const Invitation1 = () => {
+    const [isShowCover, setIsShowCover] = useState(false);
+
+
     return (
         <div className="invitation1">
-            <div className="cover">
+            <div className={isShowCover ? 'cover active' : 'cover'}>
                 <p>we invite you to our ceremony</p>
                 <p className="upacara">Upacara Manusa Yadnya</p>
                 <h1>Mepandes</h1>
@@ -14,9 +20,16 @@ const Invitation1 = () => {
                 <p>Mengundang Bapak/Ibu/Saudara/i</p>
                 <h3>Yuda</h3>
             </div>
-            <div className="nama">
+            <div className="pembukaan">
+                <div className="pembukaan-image">
+                    <img src={Flower} alt="ukiran bunga" />
+                </div>
                 <h1 className="title">Om Swastiyastu</h1>
                 <p>Atas Asung Kerta Waru Nugraha Ida Sang Hyang Widhi Wasa, kami bermaksud untuk mengundang bapak/ibu/saudara/i ke acara manusa yadnya Mepandes (potong gigi) putra-putri kami :</p>
+            </div>
+            <div className="nama">
+                <img src={Crown} alt="Mahkota title" />
+                <h1 className="title">Sane Mepandes</h1>
                 <h2>Ajeng Pradnyaswari Suryawirawan</h2>
                 <h2>I Putu Aditya Widharma Satya</h2>
                 <h2>Putu Etha Naraswari Wira </h2>
@@ -26,14 +39,10 @@ const Invitation1 = () => {
                 <h2>Made Endhita Candraswari</h2>
                 <h2>Made Sadwika Mahindra Dinata</h2>
             </div>
-            <div className="detail-event">
-                <h1 className="title">Waktu dan Tempat</h1>
-                <h3>11 November 2021</h3>
-                <p>Jumat, 09.00-18.00</p>
-                <p>Jalan Desa Blahbatuh, Gianyar</p>
-                <button>Buka Map</button>
-            </div>
+
+            <DetailEvent />
             <Protokol />
+            
             <div className="footer"></div>
         </div>
     )
