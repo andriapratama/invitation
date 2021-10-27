@@ -10,10 +10,10 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route path="/" exact={true} component={Home}/>
-          <Route path="/products" exact={true} component={Product} />
+          <Route path="/" exact={true} component={Invitation1}/>
+          {/* <Route path="/products" exact={true} component={Product} />
           
-          <Route path="/invitation-1" exact={true} component={Invitation1} />
+          <Route path="/invitation-1" exact={true} component={Invitation1} /> */}
         </Switch>
       </Router>
     </>
