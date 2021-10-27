@@ -4,6 +4,7 @@ import Protokol from "./protokol/Protokol";
 import DetailEvent from "./detail-event/DetailEvent";
 import Flower from "../../img/ukiran_1.svg";
 import Crown from "../../img/ukiran_2.svg";
+import Frame from "../../img/ukiran_3.svg";
 
 const Invitation1 = () => {
     const [isShowCover, setIsShowCover] = useState(false);
@@ -12,13 +13,25 @@ const Invitation1 = () => {
     return (
         <div className="invitation1">
             <div className={isShowCover ? 'cover active' : 'cover'}>
-                <p>we invite you to our ceremony</p>
-                <p className="upacara">Upacara Manusa Yadnya</p>
-                <h1>Mepandes</h1>
-                <h2>Keluarga Besar Putu Gede Wayan</h2>
-                <p className="dates">11 November 2021</p>
-                <p>Mengundang Bapak/Ibu/Saudara/i</p>
-                <h3>Yuda</h3>
+                <div className="cover-body">
+                    <p>we invite you to our ceremony</p>
+                    <p className="upacara">Upacara Manusa Yadnya</p>
+                    <h1>Mepandes</h1>
+                    <p className="dates">11 November 2021</p>
+                    <p>Mengundang Bapak/Ibu/Saudara/i</p>
+                    <h3>Yuda</h3>
+                </div>
+
+                <div className="cover-frame">
+                    <img className="left-top" src={Frame} alt="Frame 1" />
+                    <img className="left-bottom" src={Frame} alt="Frame 2" />
+                    <img className="right-top" src={Frame} alt="Frame 3" />
+                    <img className="right-bottom" src={Frame} alt="Frame 4" />
+                    <div className="button" onClick={() => setIsShowCover(!isShowCover)}>
+                        <i className="fas fa-caret-up"></i>
+                        <p>Open</p>
+                    </div>
+                </div>
             </div>
             <div className="pembukaan">
                 <div className="pembukaan-image">
@@ -42,7 +55,13 @@ const Invitation1 = () => {
 
             <DetailEvent />
             <Protokol />
-            
+
+            <div className="penutup">
+                <p>Merupakan kehormatan bagi kami apabila bapak/ibu/saudara/i dapat berkenan hadir ke acara Mepandes putra-putri kami.</p>
+                <p>Atas perhatiannya kami ucapkan terima kasih.</p>
+
+                <h1 className="title">Om Shanti Shanti Shanti Om</h1>
+            </div>
             <div className="footer"></div>
         </div>
     )

@@ -2,7 +2,7 @@
     width: 80%;
     height: auto;
     text-align: center;
-    margin: 50px auto;
+    margin: 60px auto;
 }
 
 .detail-event img{
@@ -10,6 +10,11 @@
     overflow: hidden;
     width: 180px;
     height: 50px;
+}
+
+.detail-event p {
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .detail-body{
@@ -23,7 +28,7 @@
 .detail-event button{
     width: 200px;
     height: 40px;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,4 +37,17 @@
     background-color: #FFB740;
     border-radius: 20px;
     color: #313131;
+}
+
+.detail-time{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.detail-group{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #FFB740;
 }

@@ -2,7 +2,7 @@
     width: 80%;
     height: auto;
     text-align: center;
-    margin: 50px auto;
+    margin: 60px auto;
 }
 
 .protokol img{
@@ -13,7 +13,7 @@
 }
 
 .protokol p {
-    text-align: justify;
+    text-align: center;
     margin: 0 0 20px 0;
 }
 
@@ -46,4 +46,14 @@
 .protokol-group p{
     text-align: center;
     margin: 0;
+}
+
+.penutup{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.penutup p{
+    margin-bottom: 30px;
 }
