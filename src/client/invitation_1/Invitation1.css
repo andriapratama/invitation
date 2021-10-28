@@ -176,6 +176,18 @@ and (max-device-height: 823px) {
 }
 
 @media only screen 
+and (max-device-width: 411px) 
+and (max-device-height: 731px) { 
+    .cover-body {
+        top: 136px;
+    }
+
+    .cover .button {
+        top: 538px;
+    }
+}
+
+@media only screen 
 and (max-device-width: 390px) 
 and (max-device-height: 844px) { 
     .cover-body {

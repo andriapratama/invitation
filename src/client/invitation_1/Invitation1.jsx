@@ -12,6 +12,12 @@ const Invitation1 = () => {
     const audioEl = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
+    const scrollTop = () =>
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
     useEffect(() => {
         if (isPlaying) {
           audioEl.current.play();
@@ -43,6 +49,7 @@ const Invitation1 = () => {
                         onClick={() => {
                             setIsShowCover(!isShowCover);
                             setIsPlaying(!isPlaying);
+                            scrollTop();
                         }}>
                         <i className="fas fa-caret-up"></i>
                         <p>Open</p>
