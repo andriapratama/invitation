@@ -1,14 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import './Invitation1.css';
 import Protokol from "./protokol/Protokol";
 import DetailEvent from "./detail-event/DetailEvent";
 import Flower from "../../img/ukiran_1.svg";
 import Crown from "../../img/ukiran_2.svg";
 import Frame from "../../img/ukiran_3.svg";
+import Music from '../../music/Bali_World_Music_Gus_Teja_Morning_Happiness.mp3';
 
 const Invitation1 = () => {
     const [isShowCover, setIsShowCover] = useState(false);
+    const audioEl = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
 
+    useEffect(() => {
+        if (isPlaying) {
+          audioEl.current.play();
+        } else {
+          audioEl.current.pause();
+        }
+      });
+    
 
     return (
         <div className="invitation1">
@@ -27,12 +38,25 @@ const Invitation1 = () => {
                     <img className="left-bottom" src={Frame} alt="Frame 2" />
                     <img className="right-top" src={Frame} alt="Frame 3" />
                     <img className="right-bottom" src={Frame} alt="Frame 4" />
-                    <div className="button" onClick={() => setIsShowCover(!isShowCover)}>
+                    <div 
+                        className="button" 
+                        onClick={() => {
+                            setIsShowCover(!isShowCover);
+                            setIsPlaying(!isPlaying);
+                        }}>
                         <i className="fas fa-caret-up"></i>
                         <p>Open</p>
                     </div>
                 </div>
             </div>
+
+            <div className="btn-extend">
+                <div className="btn-group" onClick={() => setIsPlaying(!isPlaying)}>
+                    <audio src={Music} ref={audioEl} />
+                    <i className={ isPlaying ? 'fas fa-pause' : 'fas fa-play'}></i>
+                </div>
+            </div>
+
             <div className="pembukaan">
                 <div className="pembukaan-image">
                     <img src={Flower} alt="ukiran bunga" />

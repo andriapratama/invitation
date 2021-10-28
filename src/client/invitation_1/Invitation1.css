@@ -36,6 +36,7 @@ h1{
     z-index: 10;
     transform: translateY(0);
     transition: all 1s ease;
+    overflow: hidden;
 }
 
 .cover.active{
@@ -111,13 +112,12 @@ h1{
 
 .cover .button {
     display: block;
-    height: 391px;
-    width: 391px;
+    height: 350px;
+    width: 100%;
     border-radius: 50%;
     border: none;
     background-color: #444444;
     position: absolute;
-    left: -9px;
     top: 625px;
     padding-top: 30px ;
     font-size: 20px;
@@ -125,6 +125,134 @@ h1{
 
 .cover i {
     font-size: 40px;
+}
+
+@media only screen 
+and (max-device-width: 428px) 
+and (max-device-height: 926px) { 
+    .cover-body {
+        top: 244px;
+    }
+
+    .cover .button {
+        top: 728px;
+    }
+}
+
+@media only screen 
+and (max-device-width: 414px) 
+and (max-device-height: 896px) { 
+    .cover-body {
+        top: 225px;
+    }
+
+    .cover .button {
+        top: 700px;
+    }
+}
+
+@media only screen 
+and (max-device-width: 414px) 
+and (max-device-height: 736px) { 
+    .cover-body {
+        top: 138px;
+    }
+
+    .cover .button {
+        top: 546px;
+    }
+}
+
+@media only screen 
+and (max-device-width: 411px) 
+and (max-device-height: 823px) { 
+    .cover-body {
+        top: 180px;
+    }
+
+    .cover .button {
+        top: 630px;
+    }
+}
+
+@media only screen 
+and (max-device-width: 390px) 
+and (max-device-height: 844px) { 
+    .cover-body {
+        top: 200px;
+    }
+
+    .cover .button {
+        top: 647px;
+    }
+}
+
+@media only screen 
+and (max-device-width: 375px) 
+and (max-device-height: 812px) { 
+    .cover-body {
+        top: 184px;
+    }
+
+    .cover .button {
+        top: 625px;
+    }
+}
+
+@media only screen 
+and (max-device-width: 375px) 
+and (max-device-height: 667px) { 
+    .cover-body {
+        top: 110px;
+    }
+
+    .left-top{
+        top: -80px;
+    }
+    
+    .left-bottom{
+        bottom: 35px;
+    }
+    
+    .right-top{
+        top: -97px;
+    }
+    
+    .right-bottom{
+        bottom: 48px;
+    }
+
+    .cover .button {
+        top: 478px;
+    }
+}
+
+@media only screen 
+and (max-device-width: 320px) { 
+    .cover-body {
+        top: 40px;
+    }
+
+    .left-top{
+        display: none;
+    }
+    
+    .left-bottom{
+        display: none;
+    }
+    
+    .right-top{
+        display: none;
+    }
+    
+    .right-bottom{
+        display: none;
+    }
+
+    .cover .button {
+        height: 300px;
+        top: 400px;
+    }
 }
 
 .pembukaan{
@@ -157,7 +285,7 @@ h1{
 
 .nama{
     width: 80%;
-    margin: 60px auto;
+    margin: 100px auto;
     text-align: center;
 }
 
@@ -174,4 +302,22 @@ h1{
     margin: 10px 0;
     font-style: normal;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-extend{
+    position: fixed;
+    display: flex;
+    right: 10px;
+    bottom: 20px;
+}
+
+.btn-group{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-right: 10px;
+    border-radius: 50%;
 }
