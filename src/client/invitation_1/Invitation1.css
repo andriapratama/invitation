@@ -273,6 +273,34 @@ and (max-device-height: 667px) {
 }
 
 @media only screen 
+and (max-device-width: 360px) 
+and (max-device-height: 502px) { 
+    .cover-body {
+        top: 50px;
+    }
+
+    .left-top{
+        display: none;
+    }
+    
+    .left-bottom{
+        display: none;
+    }
+    
+    .right-top{
+        display: none;
+    }
+    
+    .right-bottom{
+        display: none;
+    }
+
+    .cover .button {
+        bottom: -230px;
+    }
+}
+
+@media only screen 
 and (max-device-width: 320px) { 
     .cover-body {
         top: 40px;
