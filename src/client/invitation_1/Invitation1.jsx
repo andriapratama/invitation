@@ -28,22 +28,20 @@ const Invitation1 = () => {
         } else {
           audioEl.current.pause();
         }
-    }, []);
+    });
     
     useEffect(() => {
         const query = location.search.replace('?', '');
         const queries = query.split('&');
-        console.log(queries);
 
         for (let i = 0; i < queries.length; i++) {
             if (queries[i].match(/name/)) {
                 const name = queries[i].replace(/name=/, '')
-                console.log(name);
                 const names = name.split('-');
-                console.log(names);
                 setNames(names);
             }
         }
+        // eslint-disable-next-line
     }, []);
 
     return (
