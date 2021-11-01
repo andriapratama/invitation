@@ -37,6 +37,7 @@ h1{
     transform: translateY(0);
     transition: all 1s ease;
     overflow: hidden;
+    height: 100vh;
 }
 
 .cover.active{
@@ -118,7 +119,7 @@ h1{
     border: none;
     background-color: #444444;
     position: absolute;
-    top: 625px;
+    bottom: -200px;
     padding-top: 30px ;
     font-size: 20px;
 }
@@ -134,8 +135,20 @@ and (max-device-height: 926px) {
         top: 244px;
     }
 
-    .cover .button {
-        top: 728px;
+    .left-top{
+        top: 0;
+    }
+    
+    .left-bottom{
+        bottom: 155px;
+    }
+    
+    .right-top{
+        top: -17px;
+    }
+    
+    .right-bottom{
+        bottom: 178px;
     }
 }
 
@@ -146,8 +159,20 @@ and (max-device-height: 896px) {
         top: 225px;
     }
 
-    .cover .button {
-        top: 700px;
+    .left-top{
+        top: 0;
+    }
+    
+    .left-bottom{
+        bottom: 155px;
+    }
+    
+    .right-top{
+        top: -17px;
+    }
+    
+    .right-bottom{
+        bottom: 178px;
     }
 }
 
@@ -158,8 +183,20 @@ and (max-device-height: 736px) {
         top: 138px;
     }
 
-    .cover .button {
-        top: 546px;
+    .left-top{
+        top: -50px;
+    }
+    
+    .left-bottom{
+        bottom: 125px;
+    }
+    
+    .right-top{
+        top: -67px;
+    }
+    
+    .right-bottom{
+        bottom: 148px;
     }
 }
 
@@ -168,10 +205,6 @@ and (max-device-width: 411px)
 and (max-device-height: 823px) { 
     .cover-body {
         top: 180px;
-    }
-
-    .cover .button {
-        top: 630px;
     }
 }
 
@@ -182,8 +215,20 @@ and (max-device-height: 731px) {
         top: 136px;
     }
 
-    .cover .button {
-        top: 538px;
+    .left-top{
+        top: -40px;
+    }
+    
+    .left-bottom{
+        bottom: 125px;
+    }
+    
+    .right-top{
+        top: -57px;
+    }
+    
+    .right-bottom{
+        bottom: 148px;
     }
 }
 
@@ -193,10 +238,6 @@ and (max-device-height: 844px) {
     .cover-body {
         top: 200px;
     }
-
-    .cover .button {
-        top: 647px;
-    }
 }
 
 @media only screen 
@@ -204,10 +245,6 @@ and (max-device-width: 375px)
 and (max-device-height: 812px) { 
     .cover-body {
         top: 184px;
-    }
-
-    .cover .button {
-        top: 625px;
     }
 }
 
@@ -223,7 +260,7 @@ and (max-device-height: 667px) {
     }
     
     .left-bottom{
-        bottom: 35px;
+        bottom: 75px;
     }
     
     .right-top{
@@ -231,11 +268,7 @@ and (max-device-height: 667px) {
     }
     
     .right-bottom{
-        bottom: 48px;
-    }
-
-    .cover .button {
-        top: 478px;
+        bottom: 88px;
     }
 }
 
@@ -259,11 +292,6 @@ and (max-device-width: 320px) {
     
     .right-bottom{
         display: none;
-    }
-
-    .cover .button {
-        height: 300px;
-        top: 400px;
     }
 }
 
