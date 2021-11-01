@@ -68,8 +68,10 @@ const DetailEvent = () => {
                 </div>
                 <p>11 November 2021</p>
                 <p>Jumat, 09.00-18.00</p>
-                <p>Jalan Desa Blahbatuh, Gianyar</p>
-                <button>Buka Map</button>
+                <p style={{padding: "0 10px"}}>Gg. IV No. 12, Blahbatuh, Kec. Blahbatuh, Kab. Gianyar</p>
+                <a href="https://www.google.com/maps/place/8%C2%B034'07.7%22S+115%C2%B017'54.8%22E/@-8.568813,115.2963593,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-8.568813!4d115.298548?hl=en-GB">
+                    <button>Buka Map</button>
+                </a>
             </div>
         </div>
     )
