@@ -38,9 +38,10 @@ const DetailEvent = () => {
     useEffect(() => {
         startTimer();
         return () => {
+            // eslint-disable-next-line
             clearInterval(interval.current); 
         };
-    });
+    }, []);
 
     return (
         <div className="detail-event">
