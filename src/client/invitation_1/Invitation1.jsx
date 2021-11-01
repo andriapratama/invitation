@@ -6,8 +6,12 @@ import Flower from "../../img/ukiran_1.svg";
 import Crown from "../../img/ukiran_2.svg";
 import Frame from "../../img/ukiran_3.svg";
 import Music from '../../music/Bali_World_Music_Gus_Teja_Morning_Happiness.mp3';
+import { useLocation } from "react-router";
 
 const Invitation1 = () => {
+    const location = useLocation();
+    const [names, setNames] = useState([]);
+
     const [isShowCover, setIsShowCover] = useState(false);
     const audioEl = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
@@ -24,8 +28,23 @@ const Invitation1 = () => {
         } else {
           audioEl.current.pause();
         }
-      });
+    }, []);
     
+    useEffect(() => {
+        const query = location.search.replace('?', '');
+        const queries = query.split('&');
+        console.log(queries);
+
+        for (let i = 0; i < queries.length; i++) {
+            if (queries[i].match(/name/)) {
+                const name = queries[i].replace(/name=/, '')
+                console.log(name);
+                const names = name.split('-');
+                console.log(names);
+                setNames(names);
+            }
+        }
+    }, []);
 
     return (
         <div className="invitation1">
@@ -36,7 +55,9 @@ const Invitation1 = () => {
                     <h1>Mepandes</h1>
                     <p className="dates">11 November 2021</p>
                     <p>Mengundang Bapak/Ibu/Saudara/i</p>
-                    <h3>Yuda</h3>
+                    <div style={{display: "flex", justifyContent: "center"}}>
+                        {names.map((name, index) => <h3 key={index} style={{padding: "0 5px" }}>{name}</h3>)}
+                    </div>
                 </div>
 
                 <div className="cover-frame">
