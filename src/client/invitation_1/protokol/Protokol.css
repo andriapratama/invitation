@@ -18,7 +18,7 @@
 }
 
 .protokol-body{
-    width: 70%;
+    width: 90%;
     height: auto;
     margin: 0 auto;
     padding: 20px 40px;
@@ -28,11 +28,10 @@
     border-radius: 20px;
     background-color: transparent;
     border: 1px solid #FFB740;
-    ;
 }
 
 .protokol-group {
-    width: 35%;
+    width: 15%;
     height: auto;
     display: block;
     margin: 10px 0;
@@ -56,4 +55,15 @@
 
 .penutup p{
     margin-bottom: 30px;
+}
+
+@media only screen 
+and (max-device-width: 428px) {
+    .protokol-body {
+        width: 70%;
+    }
+
+    .protokol-group {
+        width: 35%;
+    }
 }
