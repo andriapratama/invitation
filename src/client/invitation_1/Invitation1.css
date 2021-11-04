@@ -369,7 +369,7 @@ and (max-device-width: 320px) {
     text-align: center;
     margin: 10px 0;
     font-style: normal;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 .btn-extend{

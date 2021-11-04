@@ -1,34 +1,51 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import './Invitation1.css';
 import Protokol from "./protokol/Protokol";
 import DetailEvent from "./detail-event/DetailEvent";
 import Flower from "../../img/ukiran_1.svg";
 import Crown from "../../img/ukiran_2.svg";
 import Frame from "../../img/ukiran_3.svg";
-import Music from '../../music/Bali_World_Music_Gus_Teja_Morning_Happiness.mp3';
+import musicSource from '../../music/Bali_World_Music_Gus_Teja_Morning_Happiness.mp3';
 import { useLocation } from "react-router";
 
 const Invitation1 = () => {
     const location = useLocation();
     const [names, setNames] = useState([]);
-
     const [isShowCover, setIsShowCover] = useState(false);
-    const audioEl = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [music, setMusic] = useState(null);
 
     const scrollTop = () =>
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
+    
+    function loadMusic() {
+        const _audio = new Audio(musicSource);
+        _audio.load();
+        _audio.addEventListener("canplaythrough", () => {
+            console.log("Audio loaded")
+            setMusic(_audio);
+        });
+    }
+    
+    async function playMusic() {
+        await new Promise((r) => setTimeout(r, 100));
+        music && music.play().catch(e => {
+            console.log(e);
+        });
+        setIsPlaying(true);
+    }
+
+    function pauseMusic() {
+        music && music.pause();
+        setIsPlaying(false);
+    }
 
     useEffect(() => {
-        if (isPlaying) {
-          audioEl.current.play();
-        } else {
-          audioEl.current.pause();
-        }
-    });
+        loadMusic();
+    }, []);
     
     useEffect(() => {
         const query = location.search.replace('?', '');
@@ -63,11 +80,11 @@ const Invitation1 = () => {
                     <img className="left-bottom" src={Frame} alt="Frame 2" />
                     <img className="right-top" src={Frame} alt="Frame 3" />
                     <img className="right-bottom" src={Frame} alt="Frame 4" />
-                    <div 
+                    <div
                         className="button" 
-                        onClick={() => {
+                        onClick={async () => {
                             setIsShowCover(!isShowCover);
-                            setIsPlaying(!isPlaying);
+                            await playMusic();
                             scrollTop();
                         }}>
                         <i className="fas fa-caret-up"></i>
@@ -77,9 +94,14 @@ const Invitation1 = () => {
             </div>
 
             <div className="btn-extend">
-                <div className="btn-group" onClick={() => setIsPlaying(!isPlaying)}>
-                    <audio src={Music} ref={audioEl} />
-                    <i className={ isPlaying ? 'fas fa-pause' : 'fas fa-play'}></i>
+                <div className="btn-group" onClick={() => {
+                    if (isPlaying) {
+                        pauseMusic();
+                    } else {
+                        playMusic();
+                    }
+                }}>
+                    <i className={ isPlaying ? 'fas fa-pause' : 'fas fa-play' }></i>
                 </div>
             </div>
 
