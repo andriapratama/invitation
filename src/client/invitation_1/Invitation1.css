@@ -109,6 +109,7 @@ h1{
 .cover h3{
     margin-top: 10px;
     font-size: 35px;
+    font-family: 'Playfair Display', serif;
 }
 
 .cover .button {
@@ -156,11 +157,11 @@ and (max-device-height: 926px) {
 and (max-device-width: 414px) 
 and (max-device-height: 896px) { 
     .cover-body {
-        top: 225px;
+        top: 200px;
     }
 
     .left-top{
-        top: 0;
+        top: -50px;
     }
     
     .left-bottom{
@@ -168,7 +169,7 @@ and (max-device-height: 896px) {
     }
     
     .right-top{
-        top: -17px;
+        top: -67px;
     }
     
     .right-bottom{
