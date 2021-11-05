@@ -110,7 +110,7 @@ const Invitation1 = () => {
                     <img src={Flower} alt="ukiran bunga" />
                 </div>
                 <h1 className="title">Om Swastiyastu</h1>
-                <p>Atas Asung Kerta Waru Nugraha Ida Sang Hyang Widhi Wasa, kami bermaksud untuk mengundang bapak/ibu/saudara/i ke acara manusa yadnya Mepandes (potong gigi) putra-putri kami :</p>
+                <p>Atas Asung Kerta Wara Nugraha Ida Sang Hyang Widhi Wasa, kami bermaksud untuk mengundang bapak/ibu/saudara/i ke acara manusa yadnya Mepandes (potong gigi) putra-putri kami :</p>
             </div>
             <div className="nama">
                 <img src={Crown} alt="Mahkota title" />
